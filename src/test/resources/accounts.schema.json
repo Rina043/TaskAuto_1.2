@@ -4,6 +4,7 @@
   "default": [],
   "items": {
     "type": "object",
+    "additionalProperties": false,
     "required": [
       "id",
       "name",
@@ -11,7 +12,6 @@
       "balance",
       "currency"
     ],
-    "additionalProperties": { "type": "string" },
     "properties": {
       "id": {
         "type": "integer"
@@ -30,7 +30,7 @@
       },
       "currency": {
         "type": "string",
-        "enum": ["RUB", "USD"]
+        "pattern": "^(RUR)|(USD)$"
       }
     }
   }
